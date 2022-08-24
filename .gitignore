@@ -1,0 +1,17 @@
+deploy.yml
+
+**/commands/switchover.sh
+**/commands/switchover.yml
+**/commands/update-postgres.yml
+
+*.log
+hostkeys
+id_*
+inventory
+keys 
+ssh_config
+test
+tmp
+tpa_known_hosts
+vars.json
+vault
