@@ -40,7 +40,7 @@ Once tpaexec is installed we can deploy the EFM demo.
 
 1. Create the file contained the credentials for the access the EDB YUM Repository
    
-   Important: Replace EDB-REPO-Username:EDB-REPO-Password with your current username/password
+   **Important**: Replace EDB-REPO-Username:EDB-REPO-Password with your current username/password
 
 ```
 echo "EDB-REPO-Username:EDB-REPO-Password" > ~/.edbrepocred
