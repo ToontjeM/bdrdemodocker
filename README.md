@@ -1,4 +1,4 @@
-# EDB Failover Manager - Demo
+# EDB Failover Manager - Demo (WIP - Work in Progress...)
 This project contains the sources for the automatic installation of the EFM environment as well as the description of the EFM demo.
 
 ## How to install the demo environment
