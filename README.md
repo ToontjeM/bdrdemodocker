@@ -52,3 +52,12 @@ echo "EDB-REPO-Username:EDB-REPO-Password" > ~/.edbrepocred
 export TPA_2Q_SUBSCRIPTION_TOKEN=<your token>
 ```
 
+3. Obtain the AWS Credentials to accessing the AWS and to create the EFM VMs, then export following variables
+
+```
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+export AWS_SESSION_TOKEN=
+```
+
+4. Include the binary tpaexec in the PATH Variable
