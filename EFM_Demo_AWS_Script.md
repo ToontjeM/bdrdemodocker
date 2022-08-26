@@ -47,7 +47,7 @@ Now we shut down the primary database and see what happens:
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-|sudo systemctl stop postgres.service|*<EFM Cluster Monitor Session>*||
+|sudo systemctl stop postgres.service|***EFM Monitor Session***||
 
 We see (in the pg2 window) that the failover manager has detected that the primary database is not available and performs the failover. The standby database now acts as the primary.
 
@@ -60,7 +60,7 @@ And of course, we can query the emp table.
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-||*<EFM Cluster Monitor Session>*|<p>SELECT inet\_server\_addr();</p><p>SELECT inet\_server\_addr();</p><p>SELECT \* from EMP;</p>|
+||***EFM Monitor Session***|<p>SELECT inet\_server\_addr();</p><p>SELECT inet\_server\_addr();</p><p>SELECT \* from EMP;</p>|
 
 But the situation is not good. The old master database does not exist. And we only have one database running without any protection.
 
@@ -71,14 +71,14 @@ Now we run the script and see that the old primary database is included in the c
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-|sudo /usr/edb/efm-4.4/bin/efm\_reconfigure\_node.sh|*<EFM Cluster Monitor Session>*||
+|sudo /usr/edb/efm-4.4/bin/efm\_reconfigure\_node.sh|***EFM Monitor Session***||
 
 In some situations, due to network bandwidth, WAL replication may take some time. To speed it up, execute the command "SELECT pg\_swicth\_wal();" in the client session:
 
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-||*<EFM Cluster Monitor Session>*|select pg\_switch\_wal();|
+||***EFM Monitor Session***|select pg\_switch\_wal();|
 
 # Switchover Demo
 
@@ -87,7 +87,7 @@ And as the last action, I show the switchover. In the operation, the roles are s
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-|sudo /usr/edb/efm-4.4/bin/efm promote efmdemo -switchover|*<EFM Cluster Monitor Session>*||
+|sudo /usr/edb/efm-4.4/bin/efm promote efmdemo -switchover|***EFM Monitor Session***||
 
 
 
