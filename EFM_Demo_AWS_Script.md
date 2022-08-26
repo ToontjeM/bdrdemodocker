@@ -20,7 +20,9 @@ In the first step we will start three terminal windows here, with Master at the 
 | :-: | :-: | :-: |
 |<p>cd <working\_directory></p><p>ssh –F ssh\_config pg1</p>|<p>cd <working\_directory></p><p>ssh –F ssh\_config pg2</p>|<p>cd <working\_directory></p><p>ssh –F ssh\_config pg3</p>|
 
-![](Aspose.Words.f48014b1-691b-4517-a60e-e63508d594ee.001.png)
+
+![alt text](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/a6fa1d93229a585572fe7aa8e2e6df3500050bb1/images/picture1.png)
+
 
 On the standby I now start monitoring the cluster, running the command “efm cluster-status efmdemo” at regular intervals
 
