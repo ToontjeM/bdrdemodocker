@@ -68,6 +68,18 @@ export AWS_SESSION_TOKEN=
 export PATH=<Path to the rpaexec binary>:${PATH}
 ``` 
 
-5. Download this repository, for example
+5. Download this repository
+
+   In my environment I will download the repository to the directory /git/projects
+
+``` 
+cd /git/projects
+git clone git@github.com:EnterpriseDB/bn-efmdemo-2022.git
+cd /git/projects/bn-efmdemo-2022
+``` 
+
+Now you ready to install and configure the EFM Environment in the AWS
+
+
 
 
