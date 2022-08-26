@@ -61,3 +61,13 @@ export AWS_SESSION_TOKEN=
 ```
 
 4. Include the binary tpaexec in the PATH Variable
+
+   For example:
+   
+ ```
+export PATH=<Path to the rpaexec binary>:${PATH}
+``` 
+
+5. Download this repository, for example
+
+
