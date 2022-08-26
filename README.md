@@ -78,8 +78,63 @@ git clone git@github.com:EnterpriseDB/bn-efmdemo-2022.git
 cd /git/projects/bn-efmdemo-2022
 ``` 
 
+5. Edit the file config.yml and replace owner with your Name or E-Mail Address
+
+```
+cluster_tags:
+  Owner: borys.neselovskyi@enterprisedb.com
+```
+
 Now you ready to install and configure the EFM Environment in the AWS
 
+## Deployment
 
+Navigate to the directory with sources, in my example /git/projects/bn-efmdemo-2022.
 
+Run ```tpaexec relink``` to rebuild tpaexec contents
 
+```
+cd /git/projects/bn-efmdemo-2022
+tpaexec relink .
+```
+
+Now run following commands to setup the EFM environment in AWS:
+
+```
+tpaexec provision .
+tpaexec deploy .
+```
+
+If the deploy process ends with the following error message:
+
+```
+TASK [pem/agent/config/final : Register PEM agent] *********************************************************************************
+fatal: [pg1]: FAILED! => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result", "changed": true}
+...ignoring
+changed: [pg3]
+fatal: [pg2]: FAILED! => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result", "changed": true}
+...ignoring
+
+TASK [pem/agent/config/final : Display stderr from failed agent registration] ******************************************************
+fatal: [pg1]: FAILED! => {
+    "assertion": "register_cmd is successful",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Wed Aug 24 07:01:10 2022 ERROR: ERROR:  tuple concurrently updated"
+}
+fatal: [pg2]: FAILED! => {
+    "assertion": "register_cmd is successful",
+    "changed": false,
+    "evaluated_to": false,
+    "msg": "Wed Aug 24 07:01:10 2022 ERROR: ERROR:  tuple concurrently updated"
+}
+ok: [pg3] => {
+    "changed": false,
+    "msg": "All assertions passed"
+```
+
+run tpaexec deploy again:
+
+```
+tpaexec deploy .
+```
