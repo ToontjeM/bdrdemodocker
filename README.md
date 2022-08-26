@@ -82,7 +82,7 @@ export AWS_SESSION_TOKEN=
    For example:
    
  ```
-export PATH=<Path to the rpaexec binary>:${PATH}
+export PATH=<Path to the tpaexec binary>:${PATH}
 ``` 
 
 5. Download this repository
