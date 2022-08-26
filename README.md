@@ -174,6 +174,8 @@ The script creates the table EMP, create some replication slots and changes some
 
 ```
 cd /git/projects/bn-efmdemo-2022
+chmod 744 demo_prep.sh
+chmod -R 744 scripts
 ./demo_prep.sh
 ```
 
