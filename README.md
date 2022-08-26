@@ -165,4 +165,4 @@ Now you are able to run the demo
 
 ## Run Demo
 
-see documentation [here](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/bb7c97adb336ed30eca2cb45674893f9e6a7d843/EFM_Demo_AWS_Script.docx)
+see documentation [Demo Script](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/54bff877829117dd880ee551914a3d57c8096a61/EFM_Demo_AWS_Script.md)
