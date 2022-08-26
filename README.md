@@ -12,6 +12,7 @@ To test the demo now, you can use tpaexec version 23.3-8-g7096dfa3, which alread
 This version can be obtained from the GutHub and installed according to the following instructions:
 
 ```
+mkdir /git/projects/
 git clone git@github.com:EnterpriseDB/tpaexec.git
 cd tpaexec
 git pull
@@ -20,18 +21,33 @@ bin/tpaexec info
 ```
 
 the Output should be:
+
 ```
 \# TPAexec v23.3-8-g7096dfa3 (branch: dev/TPA-172-efm-configuration-via-tpaexec-is-not-working)
-tpaexec=bin/tpaexec
-TPA_DIR=xxxxxxxx/tpaexec
-PYTHON=xxxxxxx/python3 (v3.9.13, no venv)
-TPA_VENV=none (did you run tpaexec setup?)
-ANSIBLE=none (won't use /usr/local/bin/ansible; run tpaexec setup)
+...
 ```
+
+
 Now run:
 
 ```
 tpaexec setup
+```
+
+To avoid the error message
+
+```
+[WARNING]: Unable to find '/root/git/tpaexec/VERSION' in expected paths (use -vvvvv to see paths)
+fatal: detected dubious ownership in repository at '/root/git/tpaexec'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /root/git/tpaexec
+ ```
+ 
+ Run the command:
+ 
+```
+git config --global --add safe.directory /root/git/tpaexec
 ```
 
 Once tpaexec is installed we can deploy the EFM demo.
