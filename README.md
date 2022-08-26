@@ -174,7 +174,7 @@ The script creates the table EMP, create some replication slots and changes some
 
 ```
 cd /git/projects/bn-efmdemo-2022
-./demp_prep.sh
+./demo_prep.sh
 ```
 
 Now you are able to run the demo
