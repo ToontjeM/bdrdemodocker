@@ -163,4 +163,6 @@ cd /git/projects/bn-efmdemo-2022
 
 Now you are able to run the demo
 
+## Run Demo
 
+see documentation [here](bn-efmdemo-2022/README.md)
