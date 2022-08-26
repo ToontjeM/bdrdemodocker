@@ -1,5 +1,5 @@
-| First Header  | Second Header | Thrird Handler | Comments. |
+| Action | Window 1: Master | Window 2: Standby | Window 3: Client | Notes |
 | ------------- | ------------- | -------------- | --------- |
-| Content Cell  | Content Cell  | Content Cell   |           |
+| Connect to VMs  | Content Cell  | Content Cell   |           |
 | Content Cell  | Content Cell  | Content Cell   |           |
 | Content Cell  | Content Cell  | Content Cell   |.           
