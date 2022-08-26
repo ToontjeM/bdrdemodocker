@@ -60,6 +60,7 @@ Once tpaexec is installed we can deploy the EFM demo.
 
 ```
 echo "EDB-REPO-Username:EDB-REPO-Password" > ~/.edbrepocred
+export EDB_REPO_CREDENTIALS_FILE="$HOME/.edbrepocred"
 ```
 
 2. Enable any 2ndQuadrant repositories and set the variable
