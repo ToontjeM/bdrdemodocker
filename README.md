@@ -138,3 +138,29 @@ run tpaexec deploy again:
 ```
 tpaexec deploy .
 ```
+
+## Test the deployment
+
+Navigate to your working directory (in my case: /git/projects/bn-efmdemo-2022) and test the connection to vms pg1, pg2 and pg3:
+
+```
+cd /git/projects/bn-efmdemo-2022
+ssh -F ssh_config pg1
+ssh -F ssh_config pg2
+ssh -F ssh_config pg3
+```
+
+## Setup the Demo
+
+Run the script ```demo_prep.sh``` and setuo the EFM demo. 
+
+The script creates the table EMP, create some replication slots and changes some efm settings
+
+```
+cd /git/projects/bn-efmdemo-2022
+./demp_prep.sh
+```
+
+Now you are able to run the demo
+
+
