@@ -33,6 +33,10 @@ On the standby I now start monitoring the cluster, running the command “efm cl
 
 As we can see, my master and standby databases are online and synchronized: the WAL LSN number is the same on both: primary and standby databases.
 
+
+![alt text](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/a6fa1d93229a585572fe7aa8e2e6df3500050bb1/images/picture2.png)
+
+
 In the third session (pg3 - client - bottom left) I connect to both databases using psql. The read\_write attribute defines that I always connect to a primary database because only the master database can receive and process the write transactions.
 
 We can query the emp table. And check if we are on the master:
@@ -57,6 +61,10 @@ Let's see, the client side. 
 
 We re-execute the query and see that the psql session has reconnected. Re-executing the SQL command gives us a result that we have connected to the new master database.
 
+
+![alt text](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/a6fa1d93229a585572fe7aa8e2e6df3500050bb1/images/picture3.png)
+
+
 And of course, we can query the emp table.
 
 
@@ -76,6 +84,10 @@ Now we run the script and see that the old primary database is included in the c
 |sudo /usr/edb/efm-4.4/bin/efm\_reconfigure\_node.sh|***EFM Monitor Session***||
 
 In some situations, due to network bandwidth, WAL replication may take some time. To speed it up, execute the command "SELECT pg\_swicth\_wal();" in the client session:
+
+
+![alt text](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/a6fa1d93229a585572fe7aa8e2e6df3500050bb1/images/picture4.png)
+
 
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
