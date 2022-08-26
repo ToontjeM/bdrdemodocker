@@ -44,7 +44,7 @@ We can query the emp table. And check if we are on the master:
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-|||<p>sudo -i -u enterprisedb psql postgresql://pg1,pg2,pg3/edb?target\_session\_attrs=read-write</p><p></p><p>SELECT \* from EMP;</p><p>SELECT inet\_server\_addr();</p>|
+|||<p>sudo -i -u enterprisedb psql postgresql://pg1,pg2/edb?target\_session\_attrs=read-write</p><p></p><p>SELECT \* from EMP;</p><p>SELECT inet\_server\_addr();</p>|
 
 # Failover Demo
 
