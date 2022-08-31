@@ -7,7 +7,7 @@ The EFM environment will be installed in AWS (Cloud) using the tpaexec tool.
 
 **Important**: as the current tpaexec version contains some bugs that make correct EFM configuration impossible, tpaexec version 23.6 should be used, where all these bugs are already fixed.
 
-To test the demo now, you can use tpaexec version 23.3-8-g7096dfa3, which already includes these bug fixes
+To test the demo now, you can use tpaexec version v23.5-14-gb4eb172d, which already includes these bug fixes
 
 This version can be obtained from the GutHub and installed according to the following instructions:
 
@@ -16,14 +16,13 @@ mkdir /git/projects/
 git clone git@github.com:EnterpriseDB/tpaexec.git
 cd tpaexec
 git pull
-git checkout dev/TPA-172-efm-configuration-via-tpaexec-is-not-working
 bin/tpaexec info
 ```
 
 the Output should be:
 
 ```
-\# TPAexec v23.3-8-g7096dfa3 (branch: dev/TPA-172-efm-configuration-via-tpaexec-is-not-working)
+# TPAexec v23.5-14-gb4eb172d (branch: master)
 ...
 ```
 
@@ -184,4 +183,4 @@ Now you are able to run the demo
 
 ## Run Demo
 
-see documentation [Demo Script](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/54bff877829117dd880ee551914a3d57c8096a61/EFM_Demo_AWS_Script.md)
+see documentation [Demo Script](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/ee251ab4996f49e0a2b33900bdcfad92858fc30b/EFM_Demo_AWS_Script.md)
