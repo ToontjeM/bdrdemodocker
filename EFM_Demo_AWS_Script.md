@@ -18,7 +18,7 @@ In the first step we will start three terminal windows here, with Master at the 
 
 |pg1 - Master|pg2 - Standby|pg3 - Client|
 | :-: | :-: | :-: |
-|<p>cd <working\_directory></p><p>ssh –F ssh\_config pg1</p>|<p>cd <working\_directory></p><p>ssh –F ssh\_config pg2</p>|<p>cd <working\_directory></p><p>ssh –F ssh\_config pg3</p>|
+|<p>cd <working\_directory></p><p>ssh -F ssh\_config pg1</p>|<p>cd <working\_directory></p><p>ssh -F ssh\_config pg2</p>|<p>cd <working\_directory></p><p>ssh -F ssh\_config pg3</p>|
 
 
 ![alt text](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/a6fa1d93229a585572fe7aa8e2e6df3500050bb1/images/picture1.png)
