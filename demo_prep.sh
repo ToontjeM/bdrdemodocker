@@ -23,5 +23,6 @@ do
   scp -F ${DEMO_DIR}/ssh_config ${BIN_DIR}/remote_ctl.sh admin@${i}:/home/admin
   scp -F ${DEMO_DIR}/ssh_config ${BIN_DIR}/efm_rewind.sh admin@${i}:/home/admin
   scp -F ${DEMO_DIR}/ssh_config ${BIN_DIR}/efm_reconfigure_node.sh admin@${i}:/home/admin
+  ssh -F ${DEMO_DIR}/ssh_config admin@${i} -t "chmod 755 /home/admin/remote_ctl.sh"
   ssh -F ${DEMO_DIR}/ssh_config admin@${i} -t "/home/admin/remote_ctl.sh"
 done
