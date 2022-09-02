@@ -36,17 +36,17 @@ tpaexec setup
 To avoid the error message
 
 ```
-[WARNING]: Unable to find '/root/git/tpaexec/VERSION' in expected paths (use -vvvvv to see paths)
-fatal: detected dubious ownership in repository at '/root/git/tpaexec'
+[WARNING]: Unable to find '/git/projects/tpaexec/VERSION' in expected paths (use -vvvvv to see paths)
+fatal: detected dubious ownership in repository at '/git/projects/tpaexec'
 To add an exception for this directory, call:
 
-	git config --global --add safe.directory /root/git/tpaexec
+	git config --global --add safe.directory /git/projects/tpaexec
  ```
  
  Run the command:
  
 ```
-git config --global --add safe.directory /root/git/tpaexec
+git config --global --add safe.directory /git/projects/tpaexec
 ```
 
 Once tpaexec is installed we can deploy the EFM demo.
