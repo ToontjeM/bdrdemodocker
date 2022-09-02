@@ -17,7 +17,7 @@ scp -F ${DEMO_DIR}/ssh_config ${BIN_DIR}/pg3.sh admin@${i}:/home/admin
 ssh -F ${DEMO_DIR}/ssh_config admin@${i} -t "chmod 755 /home/admin/pg3.sh"
 ssh -F ${DEMO_DIR}/ssh_config admin@${i} -t "/home/admin/pg3.sh"
 
-for i in `${ECHO} "pg1 pg2"`
+for i in `echo "pg1 pg2"`
 do
   echo ${i}
   scp -F ${DEMO_DIR}/ssh_config ${BIN_DIR}/remote_ctl.sh admin@${i}:/home/admin
