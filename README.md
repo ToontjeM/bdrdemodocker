@@ -181,13 +181,15 @@ chmod -R 744 scripts
 
 Now you are able to run the demo
 
+## Run Demo
+
+see documentation [Demo Script](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/ee251ab4996f49e0a2b33900bdcfad92858fc30b/EFM_Demo_AWS_Script.md)
+
 ## Remove the EFM Environment
+
+To delete the created EFM VMs please run the following command:
 
 ```
 cd /git/projects/bn-efmdemo-2022
 tpaexec deprovision .
 ```
-
-## Run Demo
-
-see documentation [Demo Script](https://github.com/EnterpriseDB/bn-efmdemo-2022/blob/ee251ab4996f49e0a2b33900bdcfad92858fc30b/EFM_Demo_AWS_Script.md)
