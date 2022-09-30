@@ -13,6 +13,7 @@ This version can be obtained from the GutHub and installed according to the foll
 
 ```
 mkdir /git/projects/
+cd /git/projects/
 git clone git@github.com:EnterpriseDB/tpaexec.git
 cd tpaexec
 git pull
