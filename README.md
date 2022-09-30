@@ -81,7 +81,14 @@ Please ignore the following error message:
 
 ```
 TASK [pem/agent/config/final : Register PEM backend database server for monitoring and configuration] ******************
-fatal: [pemserver -> {{ pem_server }}]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'str object' has no attribute 'node_dsn'\n\nThe error appears to be in '/opt/EDB/TPA/roles/pem/agent/config/final/tasks/register-pem-server.yml': line 19, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Register PEM backend database server for monitoring and configuration\n  ^ here\n"}
+
+fatal: [pemserver -> {{ pem_server }}]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'str object' has no 
+
+attribute 'node_dsn'\n\nThe error appears to be in '/opt/EDB/TPA/roles/pem/agent/config/final/tasks/register-pem-server.yml': line 19, column 3, but 
+
+may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Register PEM backend database 
+
+server for monitoring and configuration\n  ^ here\n"}
 ```
 
 ## Test the deployment
