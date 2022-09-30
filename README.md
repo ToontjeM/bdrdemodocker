@@ -5,52 +5,7 @@ This project contains the sources for the automatic installation of the EFM envi
 
 The EFM environment will be installed in AWS (Cloud) using the tpaexec tool.
 
-**Important**: as the current tpaexec version contains some bugs that make correct EFM configuration impossible, tpaexec version 23.6 should be used, where all these bugs are already fixed.
-
-To test the demo now, you can use tpaexec version v23.5-14-gb4eb172d, which already includes these bug fixes
-
-This version can be obtained from the GutHub and installed according to the following instructions:
-
-```
-mkdir /git/projects/
-cd /git/projects/
-git clone git@github.com:EnterpriseDB/tpaexec.git
-cd tpaexec
-git pull
-bin/tpaexec info
-```
-
-the Output should be:
-
-```
-# TPAexec v23.5-14-gb4eb172d (branch: master)
-...
-```
-
-
-Now run:
-
-```
-tpaexec setup
-```
-
-To avoid the error message
-
-```
-[WARNING]: Unable to find '/git/projects/tpaexec/VERSION' in expected paths (use -vvvvv to see paths)
-fatal: detected dubious ownership in repository at '/git/projects/tpaexec'
-To add an exception for this directory, call:
-
-	git config --global --add safe.directory /git/projects/tpaexec
- ```
- 
- Run the command:
- 
-```
-git config --global --add safe.directory /git/projects/tpaexec
-```
-
-Once tpaexec is installed we can deploy the EFM demo.
+**Important**: This EFM demo works with TPAEXEC version 23.6 and higher. Please make sure that you have installed the version >=23.6.
 
 ## Deployment preparation
 
@@ -122,38 +77,11 @@ tpaexec provision .
 tpaexec deploy .
 ```
 
-If the deploy process ends with the following error message:
+Please ignore the following error message:
 
 ```
-TASK [pem/agent/config/final : Register PEM agent] *********************************************************************************
-fatal: [pg1]: FAILED! => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result", "changed": true}
-...ignoring
-changed: [pg3]
-fatal: [pg2]: FAILED! => {"censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result", "changed": true}
-...ignoring
-
-TASK [pem/agent/config/final : Display stderr from failed agent registration] ******************************************************
-fatal: [pg1]: FAILED! => {
-    "assertion": "register_cmd is successful",
-    "changed": false,
-    "evaluated_to": false,
-    "msg": "Wed Aug 24 07:01:10 2022 ERROR: ERROR:  tuple concurrently updated"
-}
-fatal: [pg2]: FAILED! => {
-    "assertion": "register_cmd is successful",
-    "changed": false,
-    "evaluated_to": false,
-    "msg": "Wed Aug 24 07:01:10 2022 ERROR: ERROR:  tuple concurrently updated"
-}
-ok: [pg3] => {
-    "changed": false,
-    "msg": "All assertions passed"
-```
-
-run tpaexec deploy again:
-
-```
-tpaexec deploy .
+TASK [pem/agent/config/final : Register PEM backend database server for monitoring and configuration] ******************
+fatal: [pemserver -> {{ pem_server }}]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'str object' has no attribute 'node_dsn'\n\nThe error appears to be in '/opt/EDB/TPA/roles/pem/agent/config/final/tasks/register-pem-server.yml': line 19, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: Register PEM backend database server for monitoring and configuration\n  ^ here\n"}
 ```
 
 ## Test the deployment
