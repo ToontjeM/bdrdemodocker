@@ -97,9 +97,9 @@ Navigate to your working directory (in my case: /git/projects/bn-efmdemo-2022) a
 
 ```
 cd /git/projects/bn-efmdemo-2022
-ssh -F ssh_config pg1
-ssh -F ssh_config pg2
-ssh -F ssh_config pg3
+ssh -F ssh_config pg1 "uname -n"
+ssh -F ssh_config pg2 "uname -n"
+ssh -F ssh_config pg3 "uname -n"
 ```
 
 ## Setup the Demo
